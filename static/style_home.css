@@ -1,0 +1,141 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Exo 2', sans-serif;
+  background-color: #FDF5DF;
+  color: #051622;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #051622;
+  color: #FFFFFF;
+  padding: 30px 20px;
+}
+
+header h1 {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+main {
+  width: 50%;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px 5px #051622;
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+select {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 30px;
+  border: 2px solid #051622;
+  border-radius: 5px;
+  background-color: #FDF5DF;
+  width: 100%;
+  max-width: 300px;
+  cursor: pointer;
+}
+
+/* Custom file input */
+.file-input-wrapper {
+  position:relative;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+input[type="file"] {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+#file-name{
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Custom button for file input */
+.btn {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px;
+  margin: 0;
+  border: 2px solid #051622;
+  border-radius: 5px;
+  background-color: #FDF5DF;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+  
+/* Submit button */
+button[type="submit"] {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px 40px;
+  border: 4px solid #051622;
+  border-radius: 15px;
+  background-color: #051622;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #FDF5DF;
+  color: #051622;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  background-color: #051622;
+  color: #fff;
+  padding: 20px;
+}
+
+footer p {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
+}
