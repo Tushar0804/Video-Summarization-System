@@ -3,7 +3,7 @@ import openai
 class Summariser:
     def __init__(self, textFileName):
         self.textFileName = textFileName
-        self.apiKey = "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"
+        self.apiKey = ""
     
     def summarise(self):
         openai.api_key = self.apiKey
