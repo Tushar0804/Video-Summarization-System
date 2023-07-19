@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="/static/images/icon.png" type="image/png">
+    <link rel="stylesheet" href="/static/style_loading.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,700;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <title>Video Summarizer</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Artificial Intelligence based Video Summarizer</h1>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="bar">
+          <div class="fill"></div>
+        </div>
+  
+        <div class="counter">
+          0%
+        </div>
+  
+        <button type="submit">Click To Summarize</button>       
+      </div>
+      
+      <div class="output">
+        <span>
+          <img id="image" src="/static/images/loading.gif" alt="loading">
+        </span>
+        <div class="text">Video is under process</div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; Developed By Tushar Sharma <br> All rights reserved.</p>
+    </footer>
+
+    <script type="text/javascript">
+      let container = document.querySelector(".container");
+      let output = document.querySelector(".output");
+      let fill = document.querySelector(".fill");
+      let click = document.querySelector("button");
+      click.addEventListener("click", () => {
+        var a = 0;
+        var run = setInterval(frames, 10);
+        function frames() {
+          a = a + 2;
+          if(a < 100)
+          {
+            var counter = document.querySelector(".counter");
+            counter.textContent = a + "%";
+            fill.style.width = a + "%";
+          }
+          else if (a == 100) {
+            clearInterval(run);
+            container.style.display = "none";
+            output.style.display = "block";
+            window.location.href = "/result";
+          } 
+        }
+      });
+    </script>   
+  </body>
+</html>

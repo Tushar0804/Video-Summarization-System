@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="/static/images/icon.png" type="image/png">
+    <link rel="stylesheet" href="/static/style_home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,700;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <title>Video Summarizer</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Artificial Intelligence based Video Summarizer</h1>
+    </header>
+
+    <div class="bl"> 
+      <main>
+        <h2>Upload your video</h2>
+  
+        <form action="/loading" method="POST" enctype="multipart/form-data">
+          <div class="file-input-wrapper">
+            <input type="file" id="video" name="video" accept="video/*" required>
+            <button class="btn" type="button">Choose file</button>
+          </div>
+
+          <span id="file-name"></span>
+
+          <label for="accent">Choose video accent:</label>
+
+          <select name="accent" id="accent">
+            <option value="1">American</option>
+            <option value="2">Indian</option>
+            <option value="3">Other</option>
+          </select>
+  
+          <button type="submit">Submit</button>
+        </form>
+      </main>
+    </div>
+
+    
+    <footer>
+      <p>&copy; Developed By Tushar Sharma <br> All rights reserved.</p>
+    </footer>
+
+    <!-- To display the choosen file name -->
+    <script>
+      const fileInput = document.getElementById("video");
+      const fileName = document.getElementById("file-name");
+      
+      fileInput.addEventListener("change", function() {
+        fileName.textContent = fileInput.files[0].name;
+      });
+    </script>
+  </body>
+</html>
